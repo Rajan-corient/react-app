@@ -1,21 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-let footerStyle = {
-  width: "100%",
-  border: "2px solid grey",
-  marginTop: "2rem",
-};
 
-const Footer = props => {
-  return (
-  
-    <footer className="bg-dark text-light py-2" style={footerStyle}>
-      <p className="text-center">Copyright &copy; {props.productName}</p>
-    </footer>
+class Footer extends React.Component {
 
-  )
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      footerStyle: {
+        width: "100%",
+        border: "2px solid grey",
+        marginTop: "2rem",
+      }
+    }
+  }
+
+  render () {
+    return (
+      <footer className="bg-dark text-light py-2" style={this.state.footerStyle}>
+        <p className="text-center">Copyright &copy; {this.props.productName}</p>
+      </footer>
+    );
+  }
 }
+
+// same eg witg functio component
+// const Footer = props => {
+//   return (
+  
+//     <footer className="bg-dark text-light py-2" style={footerStyle}>
+//       <p className="text-center">Copyright &copy; {props.productName}</p>
+//     </footer>
+
+//   )
+// }
 
 Footer.propTypes = {
   productName: PropTypes.string
