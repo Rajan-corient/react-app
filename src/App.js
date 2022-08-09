@@ -33,11 +33,9 @@ function App() {
             > 
           </Route>
 
-          <Route exact path="/about" element={<About />}>
-          </Route>          
+          <Route exact path="/about" element={<About />} />         
                 
-          <Route exact path="/contact-us" element={<ContactUs />}>
-          </Route>
+          <Route exact path="/contact-us" element={<ContactUs />} />
         </Routes>
 
         <Footer productName='Apna Bazar' />
