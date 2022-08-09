@@ -1,9 +1,19 @@
 import React from 'react'
+import './Home.scss';
+import Car from '../car/Car';
 
-export const Home = () => {
+export const Home = ({ carList }) => {
   return (
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate laudantium accusamus architecto adipisci necessitatibus dicta aliquam molestias? Culpa necessitatibus soluta numquam voluptas eius quos, explicabo, ab deserunt, quas perferendis excepturi?</p>
-    </div>
+    <>
+      {
+        carList.length ? 
+        <ul className='carList'>
+          { carList.map((car) => <Car key={car.id} brand={car.brand}></Car>) }
+        </ul> : 'No Records Found'
+        
+      }
+    </>
   )
 }
+
+

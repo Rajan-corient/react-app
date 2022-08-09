@@ -9,6 +9,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+
+  const cars = [
+    { id: 1, brand: 'Ford' },
+    { id: 2, brand: 'BMW' },
+    { id: 3, brand: 'Audi' }
+  ];
+
   return (
     <div className="App">
       <Router>
@@ -19,7 +26,7 @@ function App() {
               element={
                  (
                   <>
-                    <Home />
+                    <Home carList={cars}/>
                   </>
                 )
               }
