@@ -18,7 +18,16 @@ export default function ContactUs() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`The name you entered was: ${firstName} ${lastName}`)
+    const obj = {
+      firstName,
+      lastName,
+      city,
+      state,
+      pin,
+      terms,
+      reason
+    }
+    console.log(obj);
   }
 
   return (
