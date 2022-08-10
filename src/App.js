@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import About from './components/about/About'
 import ContactUs from './components/contact-us/ContactUs'
+import { Login } from './components/login/Login'
 import { Home } from './components/home/Home'
 import { NotFound }  from './NotFound'
 import React from 'react';
@@ -37,6 +38,8 @@ function App() {
           <Route exact path="/about" element={<About />} />         
                 
           <Route exact path="/contact-us" element={<ContactUs />} />
+
+          <Route exact path="/login" element={<Login />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
