@@ -1,7 +1,8 @@
 import React from 'react'
 import './Header.scss';
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
+import Footer from '../footer/Footer';
 
 const Header = props => {
     return (
@@ -40,6 +41,8 @@ const Header = props => {
                     </div>
                 </div>
             </nav>
+            <Outlet />
+            <Footer productName='Apna Bazar'/>
         </div>
     )
 }

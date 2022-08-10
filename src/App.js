@@ -8,7 +8,7 @@ import { Login } from './components/login/Login'
 import { Home } from './components/home/Home'
 import { NotFound }  from './NotFound'
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -20,7 +20,21 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Header title="Khana Khazana" />}>
+          <Route index element={<Home carList={cars} />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
+
+      {/* <Router>
         <Header title="Khana Khazana"/>
 
         <Routes>
@@ -45,7 +59,7 @@ function App() {
         </Routes>
 
         <Footer productName='Apna Bazar' />
-      </Router>
+      </Router> */}
     </div>
   );
 }
