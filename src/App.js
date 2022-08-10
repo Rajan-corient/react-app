@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer';
 import About from './components/about/About'
 import ContactUs from './components/contact-us/ContactUs'
 import { Home } from './components/home/Home'
+import { NotFound }  from './NotFound'
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -36,6 +37,8 @@ function App() {
           <Route exact path="/about" element={<About />} />         
                 
           <Route exact path="/contact-us" element={<ContactUs />} />
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer productName='Apna Bazar' />
