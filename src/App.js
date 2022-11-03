@@ -8,7 +8,7 @@ import { Login } from './components/login/Login'
 import { Home } from './components/home/Home'
 import { NotFound }  from './NotFound'
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
 
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<Header title="Khana Khazana" />}>
           <Route index element={<Home carList={cars} />} />
@@ -32,7 +32,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
 
 
       {/* <Router>
