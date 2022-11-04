@@ -8,17 +8,23 @@ class Footer extends React.Component {
     super(props);
 
     this.state = {
-      footerStyle: {
-        width: "100%",
-        border: "2px solid grey",
-        marginTop: "2rem",
-      }
+      // footerStyle: {
+      //   width: "100%",
+      //   border: "2px solid grey",
+      //   marginTop: "2rem",
+      // }
     }
+  }
+
+  footerStyle = {
+    width: "100%",
+    border: "2px solid grey",
+    marginTop: "2rem",
   }
 
   render () {
     return (
-      <footer className="bg-dark text-light py-2" style={this.state.footerStyle}>
+      <footer className="bg-dark text-light py-2" style={this.footerStyle}>
         <p className="text-center">Copyright &copy; {this.props.productName}</p>
       </footer>
     );
