@@ -2,9 +2,10 @@ import React from 'react'
 import './Home.scss';
 import Car from '../car/Car';
 
-export const Home = ({ carList }) => {
+export const Home = ({ carList, title }) => {
   return (
     <>
+      <h5 className=''>{title}</h5>
       {
         carList.length ? 
         <ul className='carList'>

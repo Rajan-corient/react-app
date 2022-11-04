@@ -25,7 +25,7 @@ class Footer extends React.Component {
   }
 }
 
-// same eg witg functio component
+// same eg witg function component
 // const Footer = props => {
 //   return (
   

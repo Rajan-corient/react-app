@@ -7,6 +7,9 @@ const Car = props => {
   )
 }
 
-Car.propTypes = {}
+Car.propTypes = {
+  id: PropTypes.number,
+  brand: PropTypes.string
+};
 
 export default Car
