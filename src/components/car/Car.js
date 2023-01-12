@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Car = props => {
   return (
-    <li>{props.brand}</li>
+    <li tabIndex={props.index}>{props.brand}</li>
   )
 }
 
